@@ -1,0 +1,17 @@
+.hod-dashboard-container {
+   
+    margin-left: 100px;
+    
+  }
+  
+  .hod-menu {
+    background-color: #f8f9fa; /* Light gray background for sidebar */
+    padding: 20px;
+    border: 1px solid #ddd;
+  }
+  
+  .hod-content {
+    padding: 20px;
+    overflow-y: auto; /* Scroll if content overflows */
+  }
+  
