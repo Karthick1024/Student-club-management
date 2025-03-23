@@ -8,8 +8,11 @@ import cors from "cors";
 import studentRoutes from "./routes/student.Routes.js";
 import authRoutes from "./routes/auth.Routes.js";
 import errorMiddleware from "./middleware/errorHandleware.js";
+
+import { dirname } from "path";
+import { fileURLToPath } from "url";
 import path from "path";
-const __dirname = path.resolve();
+
 dotenv.config();
 const app = express();
 
@@ -22,7 +25,7 @@ app.use(
     credentials: true,
   })
 );
-
+const __dirname = dirname(fileURLToPath(import.meta.url));
 const swaggerOptions = {
   definition: {
     openapi: "3.0.0",
@@ -53,7 +56,7 @@ app.use((req, res, next) => {
 
   next();
 });
-app.use(express.static(path.join(__dirname, "/public")));
+app.use(express.static(path.join(__dirname, "./public")));
 
 app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/students", studentRoutes);
