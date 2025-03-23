@@ -6,16 +6,17 @@ import { FaPlus, FaSearch } from "react-icons/fa";
 import { TbLogout2 } from "react-icons/tb";
 import StaffManagement from "../components/StaffManagement/StaffManagement";
 import NewRegistration from "../Components/home/NewRegistration";
+import customFetch from '../utils/customFetch'
 
 const HODDashboard = () => {
   const [showStaffManagement, setShowStaffManagement] = useState(false);
   const [showStudentRegistration, setShowStudentRegistration] = useState(false);
-  const url = "http://localhost:5100/api/v1/auth";
+  // const url = "http://localhost:5100/api/v1/auth";
   const [students, setStudents] = useState([]);
   const [filteredStudents, setFilteredStudents] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [searchField, setSearchField] = useState("studentName");
-  const studentsUrl = "http://localhost:5100/api/v1/students";
+  // const studentsUrl = "http://localhost:5100/api/v1/students";
 
   const navigate = useNavigate();
 
@@ -23,7 +24,7 @@ const HODDashboard = () => {
   useEffect(() => {
     const fetchStudents = async () => {
       try {
-        const response = await axios.get(`${studentsUrl}/filter`);
+        const response = await customFetch.get('/v1/students/filter');
         // console.log("Fetched Students:", response.data);
         if (response.data) {
           setStudents(response.data);
@@ -58,7 +59,7 @@ const HODDashboard = () => {
   const handleLogout = async () => {
     try {
 
-      await axios.get(`${url}/logout`, {}, {
+      await customFetch.get('/v1/auth/logout', {}, {
         withCredentials: true,
 
       });

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./StaffManagement.css";
 import cross_icon from "../../assets/images/cross_icon.png";
+import customFetch from '../../utils/customFetch'
 
 const StaffManagement = ({ setShowStaffManagement }) => {
   const [formData, setFormData] = useState({
@@ -21,10 +22,10 @@ const StaffManagement = ({ setShowStaffManagement }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(
-        'http://localhost:5100/api/v1/auth/register',
+      const response = await customFetch.post(
+        '/v1/auth/register',
         formData,
-        { headers: { 'Content-Type': 'application/json' } }
+        
       );
 
       setSuccess(response.data.msg); // Show success message

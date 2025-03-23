@@ -4,6 +4,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { FaPlus } from "react-icons/fa";
 import { TbLogout2 } from "react-icons/tb";
+import customFetch from '../utils/customFetch';
 
 import NewRegistration from '../Components/home/NewRegistration';
 
@@ -11,13 +12,13 @@ import NewRegistration from '../Components/home/NewRegistration';
 const StaffDashboard = () => {
 
     const [showStudentRegistration, setShowStudentRegistration] = useState(false);
-    const url = "http://localhost:5100/api/v1/auth";
+    // const url = "http://localhost:5100/api/v1/auth";
 
     const navigate = useNavigate();
     const handleLogout = async () => {
         try {
 
-            await axios.get(`${url}/logout`, {}, {
+            await axios.get('/v1/auth/logout', {}, {
                 withCredentials: true,
 
             });

@@ -2,9 +2,12 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import './Login.css';
+import customFetch from '../../utils/customFetch'
+
+
 
 const Login = () => {
-  const url = "http://localhost:5100/api/v1/auth";
+  // const url = "http://localhost:5100/api/v1/auth";
   const [formData, setFormData] = useState({ name: '', password: '' });
   const [role, setRole] = useState('hod'); // Default role
   const [error, setError] = useState('');
@@ -21,10 +24,10 @@ const Login = () => {
 
 
     try {
-      const response = await axios.post(
-        `${url}/login`,
+      const response = await customFetch.post(
+        '/v1/auth/login',
         { ...formData },
-        { headers: { 'Content-Type': 'application/json' } }
+        // { headers: { 'Content-Type': 'application/json' } }
       );
       console.log("Login Response:", response);
       const { token, user } = response.data;
