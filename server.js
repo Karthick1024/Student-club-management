@@ -80,7 +80,7 @@ app.get('/api', (req, res) => {
 })
 
 
-const port = process.env.PORT || 3100
+const port = process.env.PORT || 5100
 
 app.listen(port, async () => {
   try {
