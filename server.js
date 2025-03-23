@@ -8,7 +8,8 @@ import cors from "cors";
 import studentRoutes from "./routes/student.Routes.js";
 import authRoutes from "./routes/auth.Routes.js";
 import errorMiddleware from "./middleware/errorHandleware.js";
-
+import path from "path";
+const __dirname = path.resolve();
 dotenv.config();
 const app = express();
 
@@ -21,7 +22,6 @@ app.use(
     credentials: true,
   })
 );
-
 
 const swaggerOptions = {
   definition: {
@@ -53,13 +53,16 @@ app.use((req, res, next) => {
 
   next();
 });
+app.use(express.static(path.join(__dirname, "/public")));
 
 app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/students", studentRoutes);
 app.get("/", (req, res) => {
   res.send("Welcome to the Student Club Management API 🚀");
 });
-
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "./public", "index.html"));
+});
 
 
 
