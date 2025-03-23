@@ -71,6 +71,11 @@ app.get('/api', (req, res) => {
   res.send('Hi, Facebook-like API');
 });
 
+app.get('/', (req, res) => {
+  res.send('Welcome to the Student Club Management API 🚀');
+});
+
+
 // ✅ Server & MongoDB Connection
 const port = process.env.PORT || 5100;
 
