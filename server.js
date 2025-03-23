@@ -7,7 +7,7 @@ import swaggerJsDoc from 'swagger-jsdoc';
 import cors from "cors"
 import studentRoutes from './routes/student.Routes.js'
 import authRoutes from './routes/auth.Routes.js'
-import userRoutes from './routes/password.Routes.js'
+
 import errorMiddleware from './middleware/errorHandleware.js'  
 dotenv.config()
 
@@ -63,7 +63,7 @@ app.use((req, res, next) => {
 
 app.use('/api/v1/auth', authRoutes)
 app.use('/api/v1/students',studentRoutes)
-app.use('/api/v1/users', userRoutes)
+
 
 
 

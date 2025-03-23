@@ -106,6 +106,13 @@ const HODDashboard = () => {
             >
               Add New Staff <span className="add-icon"><FaPlus /></span>
             </button>
+            <button
+              type="button"
+              className="btn btn-success mb-4"
+              
+            >
+              Profile <span className="add-icon"><FaPlus /></span>
+            </button>
             <button type="button" onClick={handleLogout} className="btn btn-primary mb-4">
               Logout <span className="add-icon"><TbLogout2 /></span>
             </button>

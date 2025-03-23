@@ -116,6 +116,9 @@ const Login = () => {
             <button type="submit" className="btn btn-primary w-100">
               Login as {role === 'hod' ? 'HOD' : 'Staff'}
             </button>
+            <button type="submit" className="btn btn-warning text-white w-100 mt-3">
+              Forget Password
+            </button>
           </form>
         </div>
       </div>

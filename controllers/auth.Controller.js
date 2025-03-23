@@ -56,55 +56,7 @@ export const Register = async (req, res, next) => {
 };
 
 
-// export const Login = async (req, res, next) => {
-//   try {
-//     const { name, password } = req.body;
 
-//     if (!name || !password) {
-//       throw new UnauthenticatedError("Email and password are required");
-//     }
-
-  
-
-//     let user = await User.findOne({ name: name.toLowerCase() });
-  
-
-//     if (!user) {
-//       throw new UnauthenticatedError("Invalid credentials");
-//     }
-
-//     const isPasswordCorrect = await bcrypt.compare(password, user.password);
-//     if (!isPasswordCorrect) {
-//       throw new UnauthenticatedError("Invalid credentials");
-//     }
-
-
-
-//     const token = createJWT({
-//       userId: user._id,
-//       role: user.role,
-//     });
-
-//     res.cookie("token", token, {
-//       httpOnly: true,
-//       expires: new Date(Date.now() + 24 * 60 * 60 * 1000), // 1 day expiration
-//       secure: process.env.NODE_ENV === "production",
-//       sameSite: "strict",
-//     });
-
-//     res.status(StatusCodes.OK).json({
-//       success: true,
-//       user: {
-//         id: user._id,
-//         name: user.name,
-//         role: user.role,
-//         joined_date: user.joined_date
-//       },
-//     });
-//   } catch (error) {
-//     next(error);
-//   }
-// };
 export const Login = async (req, res, next) => {
   try {
     const { name, password } = req.body;
