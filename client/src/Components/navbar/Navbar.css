@@ -1,44 +1,33 @@
-.clgname h1{
-    font-size: 40px;
-}
-/* .clg-logo{
-   
-    position: absolute;
-    left: 270px;
-    width: 90px;
-} */
-.header-content{
-    /* background: linear-gradient(180deg,blue,beige); */
-    background-color: rgb(212, 97, 97);
-   
-}
-.divider{
-    color: white;
+.clgname h1 {
+  font-size: 40px;
 }
 
-
-
+.header-content {
+  background-color: rgb(0, 0, 0);
+}
+.divider {
+  color: white;
+}
 
 .clgname-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px; /* Space between logo & text */
-    flex-direction: column; /* Default for small screens */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  flex-direction: column;
 }
 
 .clg-logo {
-    width: 70px; /* Adjust size */
-    position: relative; /* Remove absolute positioning */
+  width: 70px;
+  position: relative;
 }
 
-/* Responsive for larger screens (Desktop) */
 @media (min-width: 768px) {
-    .clgname-container {
-        flex-direction: row; /* Side by side on large screens */
-    }
+  .clgname-container {
+    flex-direction: row;
+  }
 
-    .clg-logo {
-        width: 90px; /* Slightly larger on bigger screens */
-    }
+  .clg-logo {
+    width: 90px;
+  }
 }

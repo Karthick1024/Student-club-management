@@ -18,12 +18,11 @@ const NewRegistration = ({ setShowStudentRegistration }) => {
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
 
-  // Handle form data changes
+
   const changeHandler = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log("Form Data Submitted:", formData);
@@ -47,12 +46,12 @@ const NewRegistration = ({ setShowStudentRegistration }) => {
         dateOfJoin: "",
       });
 
-      // On success, display success message
+
       alert("Student Registered successfully")
       setSuccess(response.data.msg);
       setError("");
     } catch (err) {
-      // Handle error responses
+
       if (err.response) {
         setError(err.response.data.msg || "Something went wrong.");
       } else {

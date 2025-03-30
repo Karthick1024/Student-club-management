@@ -1,16 +1,14 @@
-.student-form
-{   
-    /* margin-top: -60px; */
-    margin-left: 100px;
-    width: 800px;
+.student-form {
+  margin-left: 100px;
+  width: 800px;
 }
 .card-2 {
-    border-radius: 10px;
-    padding: 20px;
+  border-radius: 10px;
+  padding: 20px;
 }
-.student-form-fill{
-    margin-left: 100px;
+.student-form-fill {
+  margin-left: 100px;
 }
-.row-1 input{
-    width: 400px;
+.row-1 input {
+  width: 400px;
 }

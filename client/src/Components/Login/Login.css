@@ -1,108 +1,94 @@
-
- body {
-    background-color: #f8f9fa;
+body {
+  background-color: #f8f9fa;
 }
 
-/* Ensure the container takes up full height and centers content */
 .appear-right {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
 }
 
-/* Fix the card size */
 .appear-right .card {
-    width:600px; /* Fixed width */
-    max-width: 600px; /* Prevents shrinking */
-    padding: 30px;
+  width: 600px;
+  max-width: 600px;
+  padding: 30px;
 }
 
-/* Ensure labels and inputs have a fixed width */
 .appear-right .form-group {
-    width: 100%;
+  width: 100%;
 }
 
 .appear-right .form-control {
-    width: 100%;
-    height: 45px; /* Fixed height for consistency */
-    font-size: 16px; /* Ensures readability */
+  width: 100%;
+  height: 45px;
+  font-size: 16px;
 }
 
 .appear-right .form-label {
-    font-size: 16px; /* Fixed label size */
+  font-size: 16px;
 }
 
-/* Ensure buttons maintain a consistent size */
 .appear-right .btn-group .btn {
-    width: 50%; /* Each button takes half the width */
-    font-size: 16px;
-    padding: 10px;
+  width: 50%;
+  font-size: 16px;
+  padding: 10px;
 }
 
 .appear-right .btn-primary,
 .appear-right .btn-warning {
-    height: 45px;
-    font-size: 16px;
+  height: 45px;
+  font-size: 16px;
 }
 
-/* Prevent unwanted resizing between 576px and 915px */
 @media (min-width: 576px) and (max-width: 915px) {
-    .appear-right .card {
-        width: 400px !important;
-    }
+  .appear-right .card {
+    width: 400px !important;
+  }
 }
-
 
 body::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
-
 
 .btn-primary {
-    background-color: #007bff;
-    border: none;
+  background-color: #007bff;
+  border: none;
 }
 
-/* .appear-right {
-    width: 35%;
-} */
-
 .appear-left {
-    
-    background: url('../../assets/images/bg1.png') no-repeat ;
-    background-position: center;
-    width: 100%;
-    height: 1200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 20px;
-    box-sizing: border-box;
-    overflow: hidden;
+  background: url("../../assets/images/bg1.png") no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .appear-left p {
-    color: coral;
-    font-size: 90px;
-    font-weight: bolder;
-    margin: 0;
+  color: coral;
+  font-size: 90px;
+  font-weight: bolder;
+  margin: 0;
 }
 
-/* Responsive Design */
 @media (max-width: 810px) {
-    .appear-left{
-        display: none;
-    }
+  .appear-left {
+    display: none;
+  }
 }
-.row{
-    margin-top:-15px;
-    background-color:rgb(212, 212, 239);
-    background-image: url('https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNDVmNzNzcDl4dXhlbTJzaTN4MDE1OW11MGJ4YzkwcDM2cXRveWU1MyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/spGF24mPp5xPtZplJM/giphy.gif');
+.row {
+  margin-top: -15px;
+  background-color: rgb(212, 212, 239);
+  background-image: url("https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNDVmNzNzcDl4dXhlbTJzaTN4MDE1OW11MGJ4YzkwcDM2cXRveWU1MyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/spGF24mPp5xPtZplJM/giphy.gif");
 }
-.card{
-    margin-top: -200px;
+.card {
+  margin-top: -200px;
 }
