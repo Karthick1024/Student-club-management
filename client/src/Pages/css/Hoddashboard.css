@@ -1,13 +1,14 @@
 .hod-dashboard-container {
-   
+   /* background: url('https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNTdmamJ6ZzhsZGt0MmFmejNmbnFiMmV1YWRvN2V6aWdiemVudmIyMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/TqkuOoKtmYI80/giphy.gif') ; */
     margin-left: 100px;
+    
     
   }
   
   .hod-menu {
-    background-color: #f8f9fa; /* Light gray background for sidebar */
+    background-color:transparent; /* Light gray background for sidebar */
     padding: 20px;
-    border: 1px solid #ddd;
+    /* border: 1px solid #ddd; */
   }
   
   .hod-content {

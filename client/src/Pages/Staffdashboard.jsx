@@ -54,16 +54,16 @@ const StaffDashboard = () => {
                             >
                                 Student Register<span className="add-icon"><FaPlus /></span>
                             </button>
-
+                            <button type="button" className="btn btn-success mb-4">
+                                Profile <span className="add-icon"><FaPlus /></span>
+                            </button>
 
                             <button type="button" onClick={handleLogout} className="btn btn-danger mb-4">
                                 Logout <span className="add-icon"><TbLogout2 /></span>
                             </button>
 
                             {/* Test Button */}
-                            <button type="button" className="btn btn-success mb-4">
-                                Test <span className="add-icon"><FaPlus /></span>
-                            </button>
+
                         </div>
                     </div>
                 </div>

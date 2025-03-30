@@ -8,6 +8,7 @@ import Dashboard from './Components/Dashboard/Dashboard'
 import Navbar from './Components/navbar/Navbar'
 
 import PrivateRoute from './Components/Private/PrivateRoute';
+import ForgetPassword from './Pages/ForgetPassword';
 
 
 
@@ -43,6 +44,7 @@ const App = () => {
                 />
                 
                 <Route path="*" element={<Navigate to="/" />} />
+                <Route path='/forgetpassword' element={<ForgetPassword/>}/>
             </Routes>
         </Router>
     );

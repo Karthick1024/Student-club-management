@@ -88,7 +88,7 @@ const HODDashboard = () => {
   };
 
   return (
-    <div className="hod-dashboard-container mt-5 d-flex">
+    <div className="hod-dashboard-container  mt-5 d-flex">
       <div className="hod-menu w-25">
         <h3 className="text-center mt-5">HOD Dashboard</h3>
         <div className="mt-5">
@@ -156,7 +156,7 @@ const HODDashboard = () => {
             </div>
 
 
-            <table className="table table-bordered">
+            <table className="table table-bordered  table-hover table-striped table-dark">
               <thead>
                 <tr>
                   <th>Name</th>

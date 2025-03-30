@@ -27,7 +27,7 @@ const Login = () => {
       const response = await customFetch.post(
         '/v1/auth/login',
         { ...formData },
-        // { headers: { 'Content-Type': 'application/json' } }
+
       );
       console.log("Login Response:", response);
       const { token, user } = response.data;
@@ -36,7 +36,7 @@ const Login = () => {
       localStorage.setItem('name', formData.name);
       localStorage.setItem('token', token);
       localStorage.setItem('role', user.role);
-      
+
 
       // Redirect based on role
       if (user.role === 'hod') {
@@ -60,14 +60,12 @@ const Login = () => {
 
   return (
     <div className="row">
-      <div className="col-sm-6 appear-left ms-5 p-5 mt-5" data-aos="flip-right">
-        <p>STUDENTS</p>
-        <p>CLUB</p>
-        <p>REGISTRATION</p>
-      </div>
-      <div className="col-sm-6 appear-right container d-flex justify-content-center mt-5">
-        <div className="card shadow-lg p-4">
-          <p className="text-center mb-4">Login</p>
+      <h1 className='text-center text-white mt-5'>STUDENTS CLUB REGISTRATION</h1>
+      <div className="col-sm-6 appear-right container   d-flex justify-content-center" >
+
+
+        <div className="card shadow-lg p-4" data-aos="fade-left">
+          <h2 className="text-center mb-4">Login</h2>
 
           <div className="btn-group w-100 mb-3" role="group">
             <button
@@ -119,12 +117,19 @@ const Login = () => {
             <button type="submit" className="btn btn-primary w-100">
               Login as {role === 'hod' ? 'HOD' : 'Staff'}
             </button>
-            <button type="submit" className="btn btn-warning text-white w-100 mt-3">
+            <button type="submit" className="btn btn-warning text-white w-100 mt-3" onClick={()=>navigate('forgetpassword')}>
               Forget Password
             </button>
           </form>
         </div>
       </div>
+      <div className="col-sm-6 appear-left  p-5" data-aos="flip-right">
+        {/* <p>STUDENTS</p>
+        <p>CLUB</p>
+        <p>REGISTRATION</p> */}
+      </div>
+      
+
     </div>
   );
 };

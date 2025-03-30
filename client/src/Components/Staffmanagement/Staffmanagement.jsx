@@ -41,7 +41,7 @@ const StaffManagement = ({ setShowStaffManagement }) => {
 
   return (
     <div className="staff-management-container">
-      <div className="card shadow-lg">
+      <div className="card-1 shadow-lg">
         <div className="card-body">
           <div className="d-flex justify-content-between align-items-center">
             <h2 className="mb-4">Manage Staff</h2>

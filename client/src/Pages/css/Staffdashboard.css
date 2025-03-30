@@ -1,13 +1,14 @@
 .staff-dashboard-container {
-   
+ 
     margin-left: 100px;
     
   }
   
   .staff-menu {
-    background-color: #f8f9fa; /* Light gray background for sidebar */
+    /* background-color: #f8f9fa;  */
+    background: transparent;
     padding: 20px;
-    border: 1px solid #ddd;
+    /* border: 1px solid #ddd; */
   }
   
   .right-side {

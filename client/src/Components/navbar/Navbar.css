@@ -1,9 +1,44 @@
 .clgname h1{
     font-size: 40px;
 }
-.clg-logo{
+/* .clg-logo{
    
     position: absolute;
     left: 270px;
     width: 90px;
+} */
+.header-content{
+    /* background: linear-gradient(180deg,blue,beige); */
+    background-color: rgb(212, 97, 97);
+   
+}
+.divider{
+    color: white;
+}
+
+
+
+
+.clgname-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px; /* Space between logo & text */
+    flex-direction: column; /* Default for small screens */
+}
+
+.clg-logo {
+    width: 70px; /* Adjust size */
+    position: relative; /* Remove absolute positioning */
+}
+
+/* Responsive for larger screens (Desktop) */
+@media (min-width: 768px) {
+    .clgname-container {
+        flex-direction: row; /* Side by side on large screens */
+    }
+
+    .clg-logo {
+        width: 90px; /* Slightly larger on bigger screens */
+    }
 }
