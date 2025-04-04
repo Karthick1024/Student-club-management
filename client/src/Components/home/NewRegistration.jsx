@@ -205,7 +205,7 @@ const NewRegistration = ({ setShowStudentRegistration }) => {
                     required
                   >
                     <option value="" disabled>
-                      Choose club
+                      Choose a club
                     </option>
                     <option value="ncc">NCC</option>
                     <option value="nss">NSS</option>
